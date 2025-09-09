@@ -1,24 +1,24 @@
-# Google Workspace Setup for mailer@ggtude.com
+# Google Workspace Setup for Your Mail Account
 
 ## Step-by-Step Google Workspace Configuration
 
-### 1. Create/Configure the mailer@ggtude.com Account
+### 1. Create/Configure the Mail Account
 
 **In Google Workspace Admin Console:**
 
 1. Go to [admin.google.com](https://admin.google.com)
 2. Navigate to **Directory** → **Users**
-3. Create user `mailer@ggtude.com` if it doesn't exist:
+3. Create user `your-mailer@yourdomain.com` if it doesn't exist:
    - First name: "Support"
    - Last name: "Mailer"
-   - Primary email: mailer@ggtude.com
+   - Primary email: your-mailer@yourdomain.com
    - Set a temporary password
 
 ### 2. Enable 2-Step Verification (Required for App Passwords)
 
 **Option A: For the specific user (recommended):**
 1. In Admin Console → **Directory** → **Users**
-2. Click on `mailer@ggtude.com`
+2. Click on `your-mailer@yourdomain.com`
 3. Go to **Security** tab
 4. Click **2-Step Verification** → **Get Started**
 5. Follow setup process (use your phone for verification)
@@ -33,13 +33,13 @@
 **If you want to avoid App Passwords:**
 1. Go to **Security** → **Less secure apps**
 2. Turn ON **Allow users to manage their access to less secure apps**
-3. Then as the user mailer@ggtude.com:
+3. Then as the user your-mailer@yourdomain.com:
    - Go to [myaccount.google.com](https://myaccount.google.com)
    - Security → Less secure app access → Turn ON
 
 ### 4. Generate App Password (Recommended Method)
 
-**As the mailer@ggtude.com user:**
+**As the your-mailer@yourdomain.com user:**
 1. Go to [myaccount.google.com](https://myaccount.google.com)
 2. Click **Security** in left sidebar
 3. Under "Signing in to Google" click **2-Step Verification**
@@ -82,7 +82,7 @@ pm2 restart support-agent-analytics
 ```env
 SMTP_HOST=smtp-relay.gmail.com
 SMTP_PORT=587
-SMTP_USER=mailer@ggtude.com
+SMTP_USER=your-mailer@yourdomain.com
 SMTP_PASS=your-app-password
 ```
 
@@ -91,7 +91,7 @@ SMTP_PASS=your-app-password
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=mailer@ggtude.com
+SMTP_USER=your-mailer@yourdomain.com
 SMTP_PASS=your-app-password
 ```
 
@@ -104,8 +104,8 @@ curl https://moments.thinkable.app/support/analyze/daily
 ```
 
 ## Current Configuration Summary:
-- **Sender:** mailer@ggtude.com
-- **Receiver:** support@ggtude.com  
+- **Sender:** your-mailer@yourdomain.com
+- **Receiver:** your-support@yourdomain.com  
 - **Service:** Daily analytics reports at 9 AM UTC
 - **Content:** HTML email with comprehensive chat bot analytics
 
@@ -114,7 +114,7 @@ curl https://moments.thinkable.app/support/analyze/daily
 **If you get "Username and Password not accepted":**
 1. Double-check the app password is correct (no spaces)
 2. Try enabling "Less secure app access" as backup
-3. Check if 2FA is properly enabled for mailer@ggtude.com
+3. Check if 2FA is properly enabled for your-mailer@yourdomain.com
 4. Try the alternative SMTP settings above
 
 **If you get "Must issue a STARTTLS command first":**

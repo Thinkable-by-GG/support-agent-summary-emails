@@ -797,7 +797,7 @@ void main() {
 
 2. **Rate Limiting**: Be mindful of API usage. The AI analysis endpoint uses OpenAI GPT-4o which has costs associated. Implement appropriate rate limiting in your app.
 
-3. **Email Reports**: When you call the AI analysis endpoint, it automatically sends email reports to the configured email address (support@ggtude.com) if the server is properly configured.
+3. **Email Reports**: When you call the AI analysis endpoint, it automatically sends email reports to the configured email address (your-support@yourdomain.com) if the server is properly configured.
 
 4. **Scheduled Analysis**: The server automatically runs analysis twice weekly (Monday and Thursday at 9 AM). Your app doesn't need to trigger this.
 
@@ -811,4 +811,4 @@ void main() {
 
 For issues or questions about the API:
 - Repository: https://github.com/Thinkable-by-GG/support-agent-summary-emails
-- Email: support@ggtude.com
+- Email: your-support@yourdomain.com
